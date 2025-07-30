@@ -1,3 +1,4 @@
+
 import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
 import NavBar from "../components/NavBar";
@@ -19,12 +20,13 @@ function Movie() {
       <NavBar />
       <h1>{movie.title}</h1>
       <p>{movie.time} minutes</p>
-      {movie.genres.map((genre, index) => (
-        <span key={index}>{genre} </span>
+      {movie.genres.map((genre, i) => (
+        <span key={i}>{genre}</span>
       ))}
     </>
   );
 }
 
 export default Movie;
+
 

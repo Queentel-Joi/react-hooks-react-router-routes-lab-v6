@@ -1,3 +1,4 @@
+
 import { useEffect, useState } from "react";
 import NavBar from "../components/NavBar";
 
@@ -18,8 +19,8 @@ function Actors() {
         <article key={actor.name}>
           <h2>{actor.name}</h2>
           <ul>
-            {actor.movies.map((movie, index) => (
-              <li key={index}>{movie}</li>
+            {actor.movies.map((movie, i) => (
+              <li key={i}>{movie}</li>
             ))}
           </ul>
         </article>
@@ -29,4 +30,5 @@ function Actors() {
 }
 
 export default Actors;
+
 
